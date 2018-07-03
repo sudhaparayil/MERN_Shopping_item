@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import uuid from 'uuid';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
 // import PropTypes from 'prop-types';
@@ -13,7 +12,7 @@ import { Button,
     Label,
     Input } from 'reactstrap';
 
-class ItemModal extends React.Component {
+class ItemModal extends Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -35,7 +34,7 @@ this.setState({ [e.target.name]:e.target.value})
     onSubmit = e => {
       e.preventDefault();
       const newItem = {
-        id: uuid(),
+       
         name: this.state.name
       }
 
